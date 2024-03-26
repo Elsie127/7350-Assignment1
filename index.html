@@ -3,40 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href=" ">About Me</a ></li>
-                <li><a href="#portfolio">Portfolio</a ></li>
-                <li><a href="#contact">Contact</a ></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1>My Personal Website</h1>
+    <button onclick="toggleMusic()" class="music-button">Play / Pause</button>
+    <nav>
+        <ul>
+            <li><a href=" ">About Me</a ></li>
+            <li><a href="#education">Campus Experience</a ></li>
+            <li><a href="#experience">Intern Experience</a ></li>
+        </ul>
+    </nav>
+</header>
+<main>
     <section id="about">
-        <h2>About Me</h2>
-        <img src="wang.jpg" alt="This is me" width="20%" height="20%">
-        <p>This section is about me...</p >
-    </section>
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="projects">
-            <div class="project">Project 1</div>
-            <div class="project">Project 2</div>
-            <div class="project">Project 3</div>
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <img src="wang.jpg" alt="wangyitong" class="profile-picture">
+                <div class="profile-text">
+                    <p>My name is Wang Yitong, born on December 27, 2001. I am currently studying at Hong Kong Baptist University.</p >
+                    <p>I focus on the fields of computer science and media, and am passionate about artificial intelligence and data science.</p >
+                </div>
+            </div>
         </div>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <input type="text" name="name" placeholder="Your Name">
-            <input type="email" name="email" placeholder="Your Email">
-            <textarea name="message" placeholder="Your Message"></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <section id="education" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Campus Experience</h2>
+            <div class="me">
+                <ul class="timeline">
+                    <li>
+                        <h3>Student Union｜Director of Propaganda Department</h3>
+                        <p>2020.3 - 2021.12</p >
+                        <p>1. Responsible for the operation of the college’s public account. During his tenure, he led department members to complete 50+ tweets, with the highest number of views reaching 30,000+, and a cumulative increase of 1,000 followers.</p >
+                        <p>2. Responsible for the publicity, planning, organization and implementation of various activities of the college, and reported 20+ activities during the period of employment</p >
+                        <p>3. Responsible for poster and body design and video editing, outputting 30+ public account covers and 20+ exquisite PPTs</p >
+                        <h3>School ERP Sandbox Association｜Director of Publicity Department</h3>
+                        <p>2019.4 - 2021.12</p >
+                        <p>1. Responsible for operating the public account, pushing ERP knowledge training every week, and publishing competition information</p >
+                        <p>2. Train members and newcomers, lead the team to participate in the 7th National College Student Engineering Training Comprehensive Ability Competition and win the provincial first prize</p >
+                    </li>
+                </ul>
+                <img class="me_img" src="Changchun.jpg" alt="">
+            </div>
+            <div class="me">
+                <ul class="timeline">
+                    <li>
+                        <h3>Artificial Intelligence and Digital Media Major</h3>
+                        <p>2023.8 - present</p >
+                        <p>Major courses: Big data management and analysis, digital media artificial intelligence, data mining, big data and social media marketing</p >
+                        <p>Skill:Python、Sql、Tableau</p >
+                    </li>
+                </ul>
+                <img class="me_img" src="hkbu.png" alt="">
+            </div>
+        </div>
     </section>
+    <section id="experience" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Intern Experience</h2>
+            <div class="me">
+                <ul class="timeline">
+                    <li>
+                        <h3>TikTok-International Commercial Product Operations Intern</h3>
+                        <p>2023.4 - 2023.8</p >
+                        <p>1. In an all-English environment, independently be responsible for TikTok’s three top advertising products, and participate in the entire product operation process from 0 to 1; during the internship, help 300+ brand special effects ads to be successfully launched,
+                             Found 50+ problems and promptly recorded and reported them, the total product penetration rate increased by nearly 15%, and BiM revenue increased by 10%.</p >
+                        <p>2. Product launch: Participate in the entire process of new product launch and product introduction to the market, lead demand mining/collection, market & competitive product analysis, output product design plans, cross-department coordination and communication, 
+                            product launch and data effect tracking throughout the entire process, Complete two monthly version iterations of growth items.</p>
+                        <p>3. Product optimization: Understand the business in depth, discover bugs in the advertising review process, and write documents to report problems with the goal of improving business experience and efficiency. During his tenure, he optimized 4 product functions, 
+                            saved operational resources of 8 departments, reduced the churn rate of large customers by 4%, and reduced the annual loss of special effects advertising by 2%.</p>
+                    </li>
+                </ul>
+                <img class="me_img" src="tt.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <audio id="background-music" loop>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById('background-music');
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+</main>
+
 </body>
 </html>
